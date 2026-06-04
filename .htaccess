@@ -1,0 +1,10 @@
+﻿# Proteccion contra listado de directorios
+Options -Indexes
+
+# Bloquear acceso silencioso a archivos de entorno
+<FilesMatch "\.(env|bat|sh|ps1|conf|md)$">
+    Require all denied
+</FilesMatch>
+<Files "README.md">
+    Require all denied
+</Files>

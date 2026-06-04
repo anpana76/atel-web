@@ -1,0 +1,96 @@
+Informe técnico de desarrollo web
+
+Proyecto: Corporación Dental
+
+1. Resumen del proyecto
+
+Desarrollo un sitio web personalizado sobre la plataforma WordPress para Corporación Dental. Creo un tema propio desde cero con un diseño moderno, adaptable a dispositivos móviles (responsive) y completamente gestionable desde el panel de administración.
+
+Planteo el proyecto con un enfoque modular y escalable, de forma que el contenido pueda organizarse de manera estructurada y coherente.
+
+2. Naturaleza del proyecto y uso de datos
+
+Realizo este proyecto con fines exclusivamente educativos y formativos. No mantengo ninguna relación contractual, laboral ni profesional con la empresa Corporación Dental.
+
+Utilizo el nombre, los datos y la imagen corporativa únicamente como referencia realista para simular un entorno de trabajo profesional. Este enfoque me permite practicar tanto el desarrollo técnico como la elaboración de documentación y la adecuación de proyectos a contextos empresariales reales.
+
+Agradezco la posibilidad de utilizar estos elementos como base del proyecto, ya que facilitan:
+
+La simulación de un caso real de desarrollo web
+La mejora en la toma de decisiones técnicas
+La evaluación del proyecto en un contexto más cercano al entorno profesional
+La obtención de feedback más relevante sobre estructura, diseño y enfoque
+
+Este uso no tiene fines comerciales y se limita estrictamente al ámbito educativo.
+
+3. Arquitectura y funcionalidades
+
+Estructuro el desarrollo siguiendo buenas prácticas en WordPress:
+
+Organizo el tema en directorios (inc/, assets/, templates/, etc.)
+Desarrollo la página de inicio (home), donde ya integro:
+Información corporativa real
+Horarios
+Redes sociales
+Formulario de contacto
+Implemento Custom Post Types (CPT) para:
+Clínicas
+Equipo
+Tratamientos
+Testimonios
+Desarrollo las bases de las plantillas dinámicas asociadas a cada CPT
+Aplico estilos visuales alineados con la identidad corporativa:
+Colores
+Tipografía
+Componentes (botones, tarjetas, bloques)
+Adapto el diseño a distintos dispositivos, continuando con ajustes de comportamiento responsive
+4. Estado actual (Checklist de validación)
+✔ Home con contenido real y bloques visuales
+☐ CPTs completamente gestionables desde el administrador
+☐ Sección de clínicas plenamente funcional
+☐ Sección de equipo plenamente funcional
+☐ Sección de tratamientos plenamente funcional
+☐ Sección de testimonios plenamente funcional
+☐ Mejoras visuales completamente refinadas
+5. Estimación de tiempos de implantación
+
+Organizo el desarrollo en fases, incluyendo el impacto de incidencias:
+
+Fase	Descripción	Tiempo estimado
+Análisis y planificación	Defino estructura y requisitos	5 - 7 horas
+Desarrollo del tema	Creo la base del tema	12 - 16 horas
+Maquetación inicial	Construyo la home	12 - 18 horas
+Desarrollo de CPTs	Implemento contenido dinámico	8 - 12 horas
+Integración de secciones	Desarrollo páginas internas	12 - 18 horas
+Ajustes visuales	Refino diseño y responsive	8 - 12 horas
+Gestión de incidencias	Correcciones y retrabajo	8 - 14 horas
+
+Tiempo total estimado:
+👉 65 – 97 horas de desarrollo
+
+6. Incidencias y dificultades
+
+Durante el desarrollo encuentro varias dificultades:
+
+Problemas de maquetación
+Ajusto repetidamente la estructura visual debido a comportamientos inesperados en distintos dispositivos, lo que me obliga a rehacer partes del diseño.
+Readaptación a PHP
+Trabajo con PHP para el desarrollo de plantillas y lógica dinámica. Retomo conocimientos previos que requieren un proceso de reacondicionamiento, especialmente en loops y estructuras propias de WordPress.
+7. Contexto tecnológico
+
+Utilizo PHP como base del desarrollo, lenguaje introducido en 1995, ampliamente consolidado en el desarrollo web y fundamental en WordPress.
+
+8. Próximos pasos
+
+En las siguientes fases:
+
+Completaré la gestión total de los CPTs
+Finalizaré las secciones funcionales
+Integraré contenido definitivo
+Ajustaré detalles según feedback
+Implementaré plugins de SEO y seguridad si es necesario
+9. Conclusión
+
+Desarrollo el proyecto sobre una base sólida, avanzando progresivamente hacia su finalización. Este trabajo me permite simular un entorno profesional real, tanto en el desarrollo técnico como en la documentación del proyecto.
+
+El uso de datos reales, dentro de un contexto educativo, mejora significativamente mi capacidad para afrontar proyectos similares en un entorno laboral, facilitando la evaluación, el aprendizaje y la mejora continua.

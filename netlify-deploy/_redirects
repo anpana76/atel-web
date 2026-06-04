@@ -1,0 +1,7 @@
+https://atelsistems.com/* https://www.atelsistems.com/:splat 301!
+https://atelsistems.es/* https://www.atelsistems.com/:splat 301!
+/presupuesto /presupuesto/ 301
+/certificaciones /certificaciones/ 301
+/cursos /cursos/ 301
+/cursos/index.html /cursos/ 301
+/cursos/solicitud.html /cursos/solicitud/ 301

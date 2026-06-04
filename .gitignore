@@ -1,0 +1,17 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependencias Node (si en algún momento se usan)
+node_modules/
+
+# Archivos de sistema y editores
+.DS_Store
+.vscode/
+
+# Carpetas temporales generadas
+.dist/
+
+# Configuracion local de tuneles (contiene secretos)
+.env.public

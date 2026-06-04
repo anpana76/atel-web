@@ -1,0 +1,32 @@
+/*
+    Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+    X-Content-Type-Options: nosniff
+    X-Frame-Options: DENY
+    Referrer-Policy: strict-origin-when-cross-origin
+    Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), gyroscope=(), accelerometer=()
+    Cross-Origin-Resource-Policy: same-site
+    Cross-Origin-Opener-Policy: same-origin
+    X-Permitted-Cross-Domain-Policies: none
+    Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' data: https://fonts.gstatic.com https://cdn.jsdelivr.net; frame-src https://www.google.com; manifest-src 'self'; upgrade-insecure-requests
+
+/css/*
+    Cache-Control: public, max-age=2592000, immutable
+
+/js/*
+    Cache-Control: public, max-age=2592000, immutable
+
+/img/*
+    Cache-Control: public, max-age=2592000, immutable
+
+/certificaciones/*
+    Cache-Control: public, max-age=600
+
+/cursos/*
+    Cache-Control: public, max-age=600
+
+/presupuesto/*
+    Cache-Control: public, max-age=600
+
+/index.html
+    Cache-Control: public, max-age=600
+

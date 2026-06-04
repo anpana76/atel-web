@@ -1,0 +1,163 @@
+/* Custom High-Tech Cursor Styles */
+
+/* Hide default cursor on desktop */
+@media (pointer: fine) {
+    body {
+        cursor: none !important;
+    }
+    
+    a, button, select, input, textarea, [role="button"], .accordion-header, .service-image-nav, .cookie-open-settings, .intent-chip {
+        cursor: none !important;
+    }
+    
+    /* Elegant Custom Cursor Container */
+    #custom-cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #00ff66; /* Neon Green matching tech aesthetic */
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 100000;
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+        box-shadow: 0 0 10px rgba(0, 255, 102, 0.8), 0 0 20px rgba(0, 255, 102, 0.4);
+    }
+
+    #custom-cursor-ring {
+        width: 36px;
+        height: 36px;
+        border: 1.5px solid rgba(0, 255, 102, 0.5);
+        border-radius: 50%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 99999;
+        transition: width 0.3s ease-out, height 0.3s ease-out, border-color 0.3s, background-color 0.3s, transform 0.1s ease-out;
+        box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
+    }
+
+    /* Tech Hover State */
+    body.cursor-hover #custom-cursor-dot {
+        width: 4px;
+        height: 4px;
+        background-color: #00e1ff; /* Neon cyan on hover */
+        box-shadow: 0 0 10px rgba(0, 225, 255, 0.8);
+    }
+
+    body.cursor-hover #custom-cursor-ring {
+        width: 56px;
+        height: 56px;
+        border-color: rgba(0, 225, 255, 0.8);
+        background-color: rgba(0, 225, 255, 0.05);
+        box-shadow: 0 0 25px rgba(0, 225, 255, 0.4);
+        animation: cursorPulse 1.5s infinite alternate ease-in-out;
+    }
+    
+    /* Click State */
+    body.cursor-clicking #custom-cursor-dot {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    body.cursor-clicking #custom-cursor-ring {
+        transform: translate(-50%, -50%) scale(0.6);
+        background-color: rgba(0, 255, 102, 0.2);
+    }
+}
+
+/* Fallback for touch devices */
+@media (pointer: coarse) {
+    #custom-cursor-dot, #custom-cursor-ring {
+        display: none !important;
+    }
+}
+
+/* Animations & Keyframes */
+@keyframes cursorPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        border-width: 1.5px;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.1);
+        border-width: 1px;
+    }
+}
+
+/* Premium Tech Enhancements for website elements */
+
+/* High-tech glow cards hover */
+.accordion-item, .hero-features-grid > div, .card, .service-card {
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.accordion-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(2, 119, 55, 0.15) !important;
+}
+
+/* Tech button glowing border and text stretch */
+.btn-primary, .floating-budget, .intent-chip {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-primary::after, .floating-budget::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+    pointer-events: none;
+}
+
+.btn-primary:hover::after, .floating-budget:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Subtle holographic line animations for headers */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #027737, #00ff66);
+    margin: 15px auto 0;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+.section-title:hover::after {
+    width: 120px;
+}
+
+/* Custom Social Media Hover Colors */
+.footer-social a[aria-label="Facebook"]:hover {
+    background: #1877F2 !important;
+    border-color: #1877F2 !important;
+    box-shadow: 0 0 10px rgba(24, 119, 242, 0.5);
+}
+.footer-social a[aria-label="Instagram"]:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    border-color: #dc2743 !important;
+    box-shadow: 0 0 10px rgba(220, 39, 67, 0.5);
+}
+.footer-social a[aria-label="LinkedIn"]:hover {
+    background: #0A66C2 !important;
+    border-color: #0A66C2 !important;
+    box-shadow: 0 0 10px rgba(10, 102, 194, 0.5);
+}
+.footer-social a[aria-label="X"]:hover {
+    background: #000000 !important;
+    border-color: #333333 !important;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}

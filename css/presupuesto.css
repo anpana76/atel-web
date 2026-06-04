@@ -1,0 +1,218 @@
+/* Variables específicas de la página de presupuesto */
+:root {
+    --budget-bg: #eef5ed;
+    --budget-card: #ffffff;
+    --budget-border: rgba(68, 138, 60, 0.18);
+}
+
+/* Layout general de página */
+body {
+    background: linear-gradient(165deg, #f3f8f2 0%, #e8f2e7 100%);
+}
+
+/* Cabecera del formulario */
+.budget-header {
+    min-height: 122px;
+    padding: 18px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--budget-card);
+    border-bottom: 1px solid rgba(68, 138, 60, 0.12);
+    box-shadow: 0 8px 20px rgba(45, 45, 45, 0.06);
+}
+
+.budget-logo {
+    height: 102px;
+    width: auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.budget-main {
+    min-height: calc(100vh - 122px);
+    padding: 34px 4% 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tarjeta principal y tipografía */
+.budget-card {
+    width: min(980px, 100%);
+    background: var(--budget-card);
+    border-radius: 16px;
+    border: 1px solid var(--budget-border);
+    box-shadow: 0 20px 38px rgba(68, 138, 60, 0.12);
+    padding: 28px;
+}
+
+.budget-card h1 {
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+}
+
+.budget-subtitle {
+    color: #447042;
+    margin-bottom: 24px;
+}
+
+/* Rejilla de campos */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.budget-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #2f4a2c;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.required-label::after {
+    content: "\00A0*";
+    color: #b62929;
+}
+
+/* En dos columnas, evita saltos de línea en el título del campo para mantener inputs alineados. */
+.form-grid > label:not(.full-width) > span {
+    white-space: nowrap;
+}
+
+/* Inputs/controles de formulario */
+.budget-form input,
+.budget-form textarea,
+.budget-form select {
+    border: 1px solid rgba(68, 138, 60, 0.3);
+    border-radius: 10px;
+    padding: 11px 12px;
+    font-size: 0.95rem;
+    background: #fff;
+}
+
+/* Mantiene la misma altura visual en campos de una sola línea. */
+.budget-form input,
+.budget-form select {
+    min-height: 46px;
+    line-height: 1.25;
+}
+
+.budget-form textarea {
+    resize: vertical;
+}
+
+.budget-form input:focus,
+.budget-form textarea:focus,
+.budget-form select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(68, 138, 60, 0.16);
+    outline: none;
+}
+
+.check-row {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    font-weight: 500;
+    color: #3a4f38;
+}
+
+.check-row input {
+    margin-top: 2px;
+}
+
+/* Botón de envío */
+.submit-btn {
+    margin-top: 18px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4d9844, #3f8538);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 13px 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #58a54f, #3f8538);
+    transform: translateY(-1px);
+}
+
+.submit-btn[disabled] {
+    opacity: 0.72;
+    cursor: wait;
+}
+
+.form-status {
+    margin-top: 14px;
+    min-height: 24px;
+    font-weight: 600;
+}
+
+.form-status.success {
+    color: #2f6b2a;
+}
+
+.form-status.error {
+    color: #b62929;
+}
+
+/* Campo oculto anti-spam */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .budget-header {
+        min-height: 95px;
+        padding: 14px 5%;
+    }
+
+    .budget-logo {
+        height: 74px;
+    }
+
+    .budget-main {
+        padding: 24px 4% 34px;
+        align-items: flex-start;
+    }
+
+    .budget-card {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid > label:not(.full-width) > span {
+        white-space: normal;
+    }
+
+}

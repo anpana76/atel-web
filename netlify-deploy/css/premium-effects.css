@@ -1,0 +1,208 @@
+/* ============================================================
+   PREMIUM TECH EFFECTS - AESTHETICS OVERRIDES
+   ============================================================ */
+
+/* 1. PREMIUM COLLAGE PRELOADER */
+#premium-preloader {
+    position: fixed;
+    inset: 0;
+    background-color: #080b11;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: 'Outfit', 'Inter', sans-serif;
+    overflow: hidden;
+    transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), visibility 1s;
+}
+
+/* Background Collage Grid */
+.preloader-collage {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+    opacity: 0.16; /* Sutil low-opacity to not distract, very high-tech */
+    pointer-events: none;
+    z-index: 1;
+    filter: grayscale(100%) blur(1px);
+    transition: filter 1s ease;
+}
+
+.preloader-collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    animation: collageZoom 10s infinite alternate ease-in-out;
+}
+
+/* Stagger animation delay to look organic */
+.preloader-collage-img:nth-child(even) {
+    animation-delay: 2s;
+}
+
+.preloader-collage-img:nth-child(3n) {
+    animation-delay: 4s;
+}
+
+@keyframes collageZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+}
+
+/* Glass overlay on top of collage */
+.preloader-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(8, 11, 17, 0.6) 0%, #080b11 90%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Center Content */
+.preloader-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.preloader-logo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(0, 255, 102, 0.5);
+}
+
+.preloader-logo span {
+    color: #00ff66;
+}
+
+.preloader-bar-wrap {
+    width: 280px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.preloader-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #027737, #00ff66);
+    box-shadow: 0 0 8px #00ff66;
+    transition: width 0.1s linear;
+}
+
+.preloader-status {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #00ff66;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    text-shadow: 0 0 5px rgba(0, 255, 102, 0.3);
+}
+
+body {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* 2. HERO CONSTELLATION CANVAS */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+#hero-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.hero-mosaic, .hero-services-cta, .hero-title-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+/* 3. SPOTLIGHT CARD GLOW EFFECT */
+.accordion-item, .intent-strip-card, .cursos-panel, .cta-section {
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+    --glow-color: rgba(0, 255, 102, 0.15);
+    position: relative;
+}
+
+.accordion-item::before, .intent-strip-card::before, .cursos-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    background: radial-gradient(
+        500px circle at var(--mouse-x) var(--mouse-y),
+        rgba(0, 255, 102, 0.08),
+        transparent 40%
+    );
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.accordion-item:hover::before, .intent-strip-card:hover::before, .cursos-panel:hover::before {
+    opacity: 1;
+}
+
+/* Glassmorphism overrides for premium tech card headers */
+.accordion-item {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(2, 119, 55, 0.08) !important;
+    z-index: 2;
+}
+
+.accordion-header {
+    position: relative;
+    z-index: 1;
+}
+
+/* Subtle premium scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0f19;
+}
+::-webkit-scrollbar-thumb {
+    background: #027737;
+    border-radius: 5px;
+    border: 2px solid #0b0f19;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #00ff66;
+    box-shadow: 0 0 10px #00ff66;
+}
